@@ -3,7 +3,7 @@ This package provides loader for Webpack which extracts static react-inline decl
 
 ## Install
 ```
-npm install react-inline react-inline-loader
+npm install react-inline isman-usoh/react-inline-loader
 ```
 
 
@@ -22,6 +22,8 @@ module.exports = {
     loaders: [
       { test: /\.jsx?$/, loader: "react-inline-loader" },
     ]
+  }
+  babel: { // babel config
   }
 }
 ```
@@ -53,14 +55,18 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin("[name].css")
   ],
-  reactInline: {
+  reactInline: { 
+	// <- react inline config
     vendorPrefixes: false,
     minify: false,
     compressClassNames: false,
     loaders: {
-      css: ExtractTextPlugin.extract("style-loader!css-loader"),
+      css: ExtractTextPlugin.extract("style-loader", "css-loader"),
       code: "ts-loader"
     }
+  },
+  ts: {
+	// <- typescript config
   }
 }
 ```
