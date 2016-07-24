@@ -1,0 +1,34 @@
+{
+  "name": "react-inline-loader",
+  "version": "0.1.0",
+  "description": "Webpack loader to extract React-inline style declarations into CSS bundle",
+  "main": "index.js",
+  "author": {
+    "name": "Isman Usoh",
+    "url": "https://github.com/isman-usoh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isman-usoh/react-inline-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/isman-usoh/react-inline-loader/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-inline",
+    "webpack",
+    "webpack-loader",
+    "loader"
+  ],
+  "license": "MIT",
+  "peerDependencies": {},
+  "dependencies": {
+    "loader-utils": "^0.2.15",
+    "object-assign": "^4.1.0",
+    "react-inline": "^0.8.2",
+    "source-map": "^0.5.6"
+  }
+}
