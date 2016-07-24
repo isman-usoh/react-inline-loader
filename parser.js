@@ -14,7 +14,6 @@ module.exports = function (content) {
         code: {}
     };
 
-    console.log(options);
     var result = extractor.transform(content, options);
 
     output = { css: result.css, code: result.code };
