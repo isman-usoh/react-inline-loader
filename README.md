@@ -3,7 +3,7 @@ This package provides loader for Webpack which extracts static react-inline decl
 
 ## Install
 ```
-npm install react-inline isman-usoh/react-inline-loader
+npm install react-inline-loader
 ```
 
 
@@ -22,7 +22,7 @@ module.exports = {
     loaders: [
       { test: /\.jsx?$/, loader: "react-inline-loader" },
     ]
-  }
+  },
   babel: { // babel config
   }
 }
