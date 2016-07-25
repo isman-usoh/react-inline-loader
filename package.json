@@ -1,6 +1,6 @@
 {
   "name": "react-inline-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Webpack loader to extract React-inline style declarations into CSS bundle",
   "main": "index.js",
   "author": {

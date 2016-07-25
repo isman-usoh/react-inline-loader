@@ -58,7 +58,6 @@ module.exports = {
   reactInline: { 
 	// <- react inline config
     vendorPrefixes: false,
-    minify: false,
     compressClassNames: false,
     loaders: {
       css: ExtractTextPlugin.extract("style-loader", "css-loader"),
@@ -70,6 +69,14 @@ module.exports = {
   }
 }
 ```
+
+## Changelog
+
+### 0.1.1
+###### _July 25, 2016_
+- fix unknow style name
+
+
 
 ## License
 
