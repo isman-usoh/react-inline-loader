@@ -1,3 +1,4 @@
+var path = require("path");
 var loaderUtils = require("loader-utils");
 var SourceNode = require("source-map").SourceNode;
 var extractor = require("react-inline/extractor");
@@ -6,6 +7,7 @@ module.exports = function (content) {
     this.cacheable();
     var cb = this.async();
     var options = this.options.reactInline || {};
+    options.filename = path.parse(this.resourcePath).name;
     delete options.loaders;
     var riRequest = loaderUtils.getRemainingRequest(this);
     var request = loaderUtils.getCurrentRequest(this);
