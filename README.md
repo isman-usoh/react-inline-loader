@@ -1,5 +1,5 @@
 # react-inline-loader
-This package provides loader for Webpack which extracts static react-inline declarations into a separate CSS bundle.
+This package provides loader for Webpack which extracts static [react-inline](https://github.com/martinandert/react-inline) declarations into a separate CSS bundle.
 
 ## Install
 ```
@@ -9,12 +9,40 @@ npm install react-inline-loader
 
 ## Usage
 
+App:
+
+``` jsx
+// app.jsx
+import React from 'react';
+import StyleSheet from 'react-inline';
+
+const styles = StyleSheet.create({
+  header: {
+    fontSize: '18px',
+    color: "red"
+  },
+  subheader: {
+    fontSize: '16px',
+    color: "blue"
+  }
+});
+
+class App extends React.Component {
+  render() {
+    return <div>
+        <h1 className={styles.header}>Hello world!</h1>
+        <h2 className={styles.subheader}>React.Js</h2>
+      </div>;
+  }
+}
+```
+
 Config Webpack:
 
 ``` js
 // webpack.config.js
 module.exports = {
-  entry: "./main.jsx",
+  entry: "./app.jsx",
   output: {
     filename: "build.js"
   },
@@ -55,8 +83,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin("[name].css")
   ],
-  reactInline: { 
-	// <- react inline config
+  reactInline: { // react-inline config
     vendorPrefixes: false,
     compressClassNames: false,
     loaders: {
@@ -64,8 +91,7 @@ module.exports = {
       code: "ts-loader"
     }
   },
-  ts: {
-	// <- typescript config
+  ts: { // typescript config
   }
 }
 ```
